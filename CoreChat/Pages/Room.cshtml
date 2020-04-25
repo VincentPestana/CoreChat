@@ -1,0 +1,52 @@
+﻿@page
+@model CoreChat.Pages.RoomModel
+@{
+    ViewData["Title"] = "Room";
+}
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script>
+	var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
+
+	function createRoom() {
+
+	}
+</script>
+
+<div class="container">
+	<div class="row"><h1>Create a new room</h1></div>
+	<div class="row">&nbsp;</div>
+	<div class="row">
+		<div class="col-2">Room Name</div>
+		<div class="col-4"><input type="text" id="roomInput" /></div>
+	</div>
+	<div class="row">
+		<div class="col-2">Username</div>
+		<div class="col-4"><input type="text" id="userInput" /></div>
+	</div>
+	<div class="row">&nbsp;</div>
+	<div class="row">
+		<div class="col-6">
+			<input type="button" id="createButton" value="Create" />
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row"><h1>Joing existing room</h1></div>
+	<div class="row">&nbsp;</div>
+	<div class="row">
+		<div class="col-2">Room Name</div>
+		<div class="col-4"><input type="text" id="roomInput" /></div>
+	</div>
+	<div class="row">
+		<div class="col-2">Username</div>
+		<div class="col-4"><input type="text" id="userInput" /></div>
+	</div>
+	<div class="row">&nbsp;</div>
+	<div class="row">
+		<div class="col-6">
+			<input type="button" id="createButton" value="Join" />
+		</div>
+	</div>
+</div>
